@@ -1,0 +1,23 @@
+.merits {
+    background: $background-black;
+    padding: 30px 0 15px;
+    color:$base-title-color;
+}
+
+.merits-title-block {
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+.merits-title-txt {
+    color: $base-color-red;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.merits-ico-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}

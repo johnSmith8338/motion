@@ -1,0 +1,45 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #f56262;
+    padding: 18px 0 12px;
+    color: $base-title-color;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+        
+    @include media ('>=tablet','<=desktop'){
+        justify-content: space-around;
+    }
+}
+
+.corner {
+    width: 0;
+    height: 0;
+    border-bottom: 63px solid rgba(255, 255, 255, 0.2);
+    border-right: 63px solid #f56262;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    @include media ('<=1100px'){
+        display: none;
+    }
+}
+.corner:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 57px solid rgba(0,0,0,0.2);
+    border-left: 57px solid transparent;
+    position: absolute;
+    top: 63px;
+    right: -63px;
+}

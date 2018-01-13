@@ -1,0 +1,75 @@
+.copyrighted {
+    background: $background-black;
+    color: $base-title-color;
+    padding: 9px 0;
+}
+
+.copy a {
+    text-decoration: none;
+    color: $base-color-red;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.copy p {
+    margin: 0;
+}
+
+.copyrighted-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-holder {
+    position: relative;
+}
+
+.map {
+    width: 100%;
+}
+
+.map-info {
+    width: 600px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 10px 0 25px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    &:after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 10px solid rgba(0, 0, 0, 0.8);
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        position: absolute;
+        bottom: -10px;
+    }
+}
+
+.map-info a {
+    text-decoration: none;
+    color: $base-color-red;
+    font-size: 20px;
+    font-style: normal;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.map-info-title {
+    font-size: 30px;
+    color: $base-title-color;
+    margin: 0 0 20px;
+}
+
+.map-info-mail {
+    margin: 0 0 20px;
+}

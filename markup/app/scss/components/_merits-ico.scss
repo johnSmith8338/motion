@@ -1,0 +1,31 @@
+.merits-ico {
+    text-align: center;
+    margin: 0 0 20px 5%;
+    padding: 20px 0 0;
+    width: 33.333%;
+}
+
+
+.merits-ico:first-child {
+    margin: 0 0 20px;
+}
+
+.merits-link {
+    display: block;
+    text-decoration: none;
+}
+
+.ico-holder {
+    margin: 0 0 10px;
+}
+
+.ico-title {
+    color: $base-title-color;
+    font-size: 30px;
+    margin: 0;
+}
+
+.ico-txt {
+    font-size: 20px;
+    color: $base-color-red;
+}

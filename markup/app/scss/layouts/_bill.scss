@@ -1,0 +1,26 @@
+.bill {
+    padding: 0 0 18px;
+    border-top: 1px solid #d8d8d8;
+}
+
+.bill-block {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: -143px 0 18px;
+}
+
+.bill-more-info {
+    font-size: 20px;
+    color: $base-color-red;
+    text-align: center;
+    margin: 0 0 10px;
+    a {
+        color: $base-color-red;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

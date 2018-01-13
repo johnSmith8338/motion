@@ -1,0 +1,117 @@
+.bill-list {
+    margin: 0 0 10px 25px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    width: 33.333%;
+
+    &:first-child {
+        margin: 0 0 10px;
+    }
+    &.active{
+        .bill-item-title{
+            color: #eb4f4e;
+        }
+        .bill-item-level{
+            color: #616161;
+        }
+        .bill-item-price{
+            background: #eb4f4e;
+            a{
+                color: #eb4f4e;
+            }
+        }
+    }
+}
+
+.bill-item-title-block {
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: 0 1px 1px #fff;
+    border-radius: 5px 5px 0 0;
+    padding: 15px;
+    background: #fff;
+}
+
+.bill-item-title {
+    font-size: 40px;
+    color: #616161;
+    letter-spacing: 3px;
+}
+
+.bill-item-level {
+    font-size: 20px;
+    color: $base-color-red;
+    letter-spacing: 2px;
+}
+
+.bill-item {
+    border-bottom: 1px solid #d8d8d8;
+    box-shadow: 0 1px 1px #fff;
+    background: $background-grey;
+
+    a {
+        text-decoration: none;
+        display: block;
+        color: #616161;
+        letter-spacing: 1px;
+        padding: 14px 0;
+
+        &:hover {
+            background: mix(black, $background-grey, 5%);
+        }
+    }
+}
+
+.bill-item-price {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #616161;
+    color: #fff;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    a {
+        color: #616161;
+        text-decoration: none;
+        background: #fff;
+        padding: 3px 22px;
+        border-radius: 2px;
+        display: block;
+        letter-spacing: 1px;
+        font: {
+            size: 21px;
+            weight: bold;
+        }
+        &:hover {
+            background: mix(black, #fff, 10%);
+            color: mix(black, #616161, 30%);
+        }
+    }
+}
+
+.price-value {
+    font-size: 64px;
+    font-weight: bold;
+    display: flex;
+
+    &:before {
+        content: '$';
+        margin: 0 7px 0 0;
+        align-self: center;
+        font: {
+            size: 28px;
+            weight: bold;
+        }
+
+    }
+    &:after {
+        content: '/mo';
+        margin: 0 0 10px 10px;
+        align-self: flex-end;
+        font: {
+            size: 25px;
+            weight: normal;
+        }
+    }
+}

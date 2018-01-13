@@ -1,0 +1,86 @@
+.team {
+    background: $background-green;
+    text-align: center;
+    padding: 32px 0 10px;
+    color: $base-title-color;
+}
+
+.team-title-txt {
+    font-size: 20px;
+    color: $base-color;
+}
+
+.person-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include media ('>=tablet','<=desktop'){
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+}
+
+.person-block {
+    background: $body-background;
+    width: 25%;
+    padding: 20px 10px 10px;
+    border-radius: 5px;
+    margin: 0 0 20px 15px;
+    
+    @include media ('>=tablet','<=desktop'){
+        width: 40%;
+        margin: 0 0 20px;
+    }
+}
+
+.person-block:first-child {
+    margin: 0 0 20px;
+}
+
+.team-title-block {
+    margin: 0 0 35px;
+}
+
+.avatar-holder {
+    margin: 0 0 15px;
+}
+
+.avatar-holder img {
+    border-radius: 50%;
+    border: 10px solid $background-green;
+}
+
+.person-name {
+    color: #6cc372;
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+
+.person-position {
+    color: $base-color-red;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 25px;
+}
+
+.follow-button a {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 2px;
+    background: $background-green;
+    font-size: 25px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 15px;
+    letter-spacing: 3px;
+    &:hover {
+        background: mix(black, $background-green, 10%);
+    }
+}
+
+.follow-button [class^="icon-"] {
+    font-size: 34px;
+    margin: 0 18px 0 0;
+}

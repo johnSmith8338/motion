@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+#page {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    color: $base-color;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-family: $base-font-family;
+    background-color: $body-background;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0 0 10px;
+}
+
+h2{
+    font-size: 40px;
+    letter-spacing: 7px;
+}
+
+.anchor{
+    height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    position: relative;
+    top: -103px;
+    &-high{
+        @extend .anchor;
+        top: -285px;
+    }
+}
