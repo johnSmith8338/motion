@@ -9,6 +9,11 @@
     justify-content: space-between;
     align-items: flex-end;
     margin: -143px 0 18px;
+    
+    @include media('<desktop'){
+        margin: -109px 0 18px;
+        flex-flow: column wrap;
+    }
 }
 
 .bill-more-info {

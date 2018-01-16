@@ -14,7 +14,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     
     @include media ('>=tablet','<=desktop'){
         flex-flow: row wrap;

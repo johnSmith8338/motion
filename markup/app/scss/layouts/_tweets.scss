@@ -6,15 +6,16 @@
 
 .tweets-wrapper{
     position: relative;
-    
-    @include media ('<=1245px'){
-        padding: 0 46px;
-    }
+}
+
+.tweets-slider {
+    position: static;
+    padding: 0 46px;
 }
 
 .tweets-prev-arrow{
     position: absolute;
-	left: -11%;
+	left: 0;
 	top: 42%;
     background: #000;
 	border-radius: 50%;
@@ -28,14 +29,11 @@
         border-bottom: 3px solid #fff;
         transform: rotate(45deg);
     }
-    @include media ('<=1245px'){
-        left: 0;
-    }
 }
 
 .tweets-next-arrow{
     position: absolute;
-	right: -11%;
+	right: 0;
 	top: 42%;
     background: #000;
 	border-radius: 50%;
@@ -48,9 +46,6 @@
         border-right: 3px solid  #fff;
         border-bottom: 3px solid #fff;
         transform: rotate(315deg);
-    }
-    @include media ('<=1245px'){
-        right: 0;
     }
 }
 

@@ -1,6 +1,9 @@
 .portfolio {
     background: $background-grey;
     padding: 32px 0 188px;
+        @include media ('<1320px'){
+            padding: 32px 40px 140px;
+    }
 }
 
 .portfolio-title-block {
@@ -18,54 +21,48 @@
     letter-spacing: 1px;
 }
 
-.portfolio-list-wrapper{
+.portfolio-list-wrapper {
     position: relative;
 }
 
-.portfolio-prev-arrow{
+.portfolio-prev-arrow {
     position: absolute;
-	left: -14%;
-	top: 33%;
-    .chevron-left{
+    left: 0;
+    top: 25%;
+    .chevron-left {
         width: 18px;
         height: 18px;
-        border-left: 4px solid  #61af66;
+        border-left: 4px solid #61af66;
         border-bottom: 4px solid #61af66;
         transform: rotate(45deg);
     }
-    @include media ('<=1245px'){
-        left: 0;
-    }
 }
 
-.portfolio-next-arrow{
+.portfolio-next-arrow {
     position: absolute;
-	right: -14%;
-	top: 31%;
-    .chevron-right{
+    right: 0;
+    top: 25%;
+    .chevron-right {
         width: 18px;
         height: 18px;
-        border-right: 4px solid  #61af66;
+        border-right: 4px solid #61af66;
         border-bottom: 4px solid #61af66;
         transform: rotate(315deg);
-    }
-    @include media ('<=1245px'){
-        right: 0;
     }
 }
 
 .portfolio-list {
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 20px;
-    
-    @include media ('<=1245px'){
+    flex-wrap: wrap;
+    margin: 0 -25px 20px;
+
+    @include media ('<=1245px') {
         padding: 0 30px;
     }
-    @include media ('>=tablet','<=desktop'){
-        flex-flow: row wrap;
+    @include media ('>=tablet', '<desktop') {
+        margin: 0 -10px 20px;
         justify-content: space-around;
     }
 }
@@ -76,18 +73,14 @@
 }
 
 .portfolio-item {
-    width: 25%;
-    margin: 0 0 20px 50px;
+    width: calc(25% - 50px);
+    margin: 0 25px 20px;
     text-align: center;
-    
-    @include media ('>=tablet','<=desktop'){
-        width: 40%;
-        margin: 0 0 20px;
-    }
-}
 
-.portfolio-item:first-child {
-    margin: 0 0 20px;
+    @include media ('>=tablet', '<=desktop') {
+        width: calc(33.3333% - 20px);
+        margin: 0 10px 20px;
+    }
 }
 
 .portfolio-img {
@@ -98,4 +91,27 @@
 .portfolio-sign {
     font-size: 21px;
     color: $base-color;
+}
+
+.slick-dots {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    li {
+        display: inline-block;
+        margin: 0 0 0 12px;
+        text-indent: -9999px;
+        background: #616161;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .slick-active{
+            background: #61af66;
+        }
+    button {
+        border: 0;
+        padding: 0;
+    }
 }
