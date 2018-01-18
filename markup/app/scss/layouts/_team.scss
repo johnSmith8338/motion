@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: flex-start;
     
-    @include media ('>=tablet','<=desktop'){
+    @include media ('<=desktop'){
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: flex-start;
@@ -30,7 +30,7 @@
     border-radius: 5px;
     margin: 0 0 20px 15px;
     
-    @include media ('>=tablet','<=desktop'){
+    @include media ('<=desktop'){
         width: 48%;
         margin: 0 0 20px;
     }

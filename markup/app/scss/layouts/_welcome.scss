@@ -12,4 +12,8 @@
 h1{
     font-size: 60px;
     letter-spacing: 10px;
+
+    @include media ('<tablet'){
+        font-size: 40px;
+    }
 }

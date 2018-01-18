@@ -14,11 +14,28 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-        
+    
+    .cross{
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        border: none;
+        background: transparent;
+        line-height: 40px;
+        outline: none;
+        font:{
+            weight: bold;
+            size: 60px;
+        }
+    }
+    
     @include media ('>=tablet','<=desktop'){
         justify-content: space-around;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+    @include media ('<tablet'){
+        position: relative;
     }
 }
 

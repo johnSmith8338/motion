@@ -13,6 +13,7 @@
     @include media('<desktop'){
         margin: -109px 0 18px;
         flex-flow: column wrap;
+        align-items: center;
     }
 }
 
