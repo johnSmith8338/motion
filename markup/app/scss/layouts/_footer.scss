@@ -2,6 +2,9 @@
     background: $background-black;
     color: $base-title-color;
     padding: 9px 0;
+    @include media ('<phone'){
+        padding: 20px 0;
+    }
 }
 
 .copy a {
@@ -14,6 +17,9 @@
 
 .copy p {
     margin: 0;
+    @include media ('<phone'){
+        margin: 0 0 20px;
+    }
 }
 
 .copyrighted-wrapper {
@@ -21,6 +27,9 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    @include media ('<phone'){
+        flex-direction: column;
+    }
 }
 
 .map-holder {
@@ -51,6 +60,9 @@
         border-right: 7px solid transparent;
         position: absolute;
         bottom: -10px;
+    }
+    @include media ('<tablet'){
+        width: 60%;    
     }
 }
 
