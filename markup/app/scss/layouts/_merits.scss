@@ -20,4 +20,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    @include media ('<tablet'){
+        flex-direction: column;
+    }
 }
