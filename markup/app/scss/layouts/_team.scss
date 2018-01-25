@@ -36,15 +36,18 @@
     
     @include media ('<=desktop'){
         width: 48%;
-        margin: 0 0 20px;
+        margin: 0 0 5px;
     }
     @include media ('<tablet'){
-        width: 80%;    
+        width: 100%;    
     }
 }
 
 .person-block:first-child {
     margin: 0 0 20px;
+    @include media ('<=desktop'){
+        margin: 0 0 5px;
+    }
 }
 
 .team-title-block {

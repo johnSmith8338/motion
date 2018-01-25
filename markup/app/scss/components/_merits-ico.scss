@@ -4,14 +4,17 @@
     padding: 20px 0 0;
     width: 33.333%;
     @include media ('<tablet'){
-        margin: 0 0 20px;
-        width: 80%;
+        margin: 0 0 5px;
+        width: 100%;
     }
 }
 
 
 .merits-ico:first-child {
     margin: 0 0 20px;
+    @include media ('<tablet'){
+        margin: 0 0 5px;
+    }
 }
 
 .merits-link {
