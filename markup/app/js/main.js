@@ -1,5 +1,6 @@
 $(document).ready(function () {
     anchorLinks();
+    mobileMenu();
 });
 
 // Navigation anchor links
@@ -16,24 +17,11 @@ function anchorLinks() {
 }
 
 // Hidden menu on click
-$( document ).ready(function() {
-
-$( ".cross" ).hide();
-$( ".hidden-menu" ).click(function() {
-$( ".nav-holder" ).slideToggle( "slow", function() {
-$( ".hidden-menu" ).hide();
-$( ".cross" ).show();
-});
-});
-
-$( ".cross" ).click(function() {
-$( ".nav-holder" ).slideToggle( "slow", function() {
-$( ".cross" ).hide();
-$( ".hidden-menu" ).show();
-});
-});
-
-});
+function mobileMenu() {
+    $(".hidden-menu").click(function () {
+        $(".nav").toggleClass('nav-active');
+    });
+}
 
 // Portfolio slider
 $(".portfolio-list").slick({

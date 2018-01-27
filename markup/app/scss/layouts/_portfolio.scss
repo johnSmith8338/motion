@@ -1,8 +1,8 @@
 .portfolio {
     background: $background-grey;
     padding: 32px 0 188px;
-        @include media ('<1320px'){
-            padding: 32px 40px 140px;
+    @include media ('<1320px') {
+        padding: 32px 40px 140px;
     }
 }
 
@@ -29,6 +29,7 @@
     position: absolute;
     left: 0;
     top: 25%;
+    cursor: pointer;
     .chevron-left {
         width: 18px;
         height: 18px;
@@ -42,6 +43,7 @@
     position: absolute;
     right: 0;
     top: 25%;
+    cursor: pointer;
     .chevron-right {
         width: 18px;
         height: 18px;
@@ -58,12 +60,39 @@
     flex-wrap: wrap;
     margin: 0 -25px 20px;
 
+    .slick-dots {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        li {
+            display: inline-block;
+            margin: 0 0 0 12px;
+            text-indent: -9999px;
+            background: #616161;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .slick-active {
+            background: #61af66;
+        }
+        button {
+            border: 0;
+            padding: 0;
+        }
+    }
+
+
     @include media ('<=1245px') {
         padding: 0 30px;
     }
     @include media ('>=tablet', '<desktop') {
         margin: 0 -10px 20px;
         justify-content: space-around;
+    }
+    @include media ('<tablet') {
+        text-align: center;
     }
 }
 
@@ -91,27 +120,4 @@
 .portfolio-sign {
     font-size: 21px;
     color: $base-color;
-}
-
-.slick-dots {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    li {
-        display: inline-block;
-        margin: 0 0 0 12px;
-        text-indent: -9999px;
-        background: #616161;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-    .slick-active{
-            background: #61af66;
-        }
-    button {
-        border: 0;
-        padding: 0;
-    }
 }

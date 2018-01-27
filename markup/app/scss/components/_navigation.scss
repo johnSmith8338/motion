@@ -1,11 +1,7 @@
 .nav-holder {
     position: relative;
-    
-    @include media ('>=tablet','<=desktop'){
-        display: block;
-    }
-    
-    @include media ('<tablet'){
+
+    @include media ('<tablet') {
         display: none;
         position: absolute;
         top: 100%;
@@ -13,6 +9,10 @@
         width: 100%;
         background: #f56262;
         z-index: 2;
+
+        .nav-active & {
+            display: block;
+        }
     }
 }
 
@@ -20,8 +20,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    
-    @include media ('<tablet'){
+
+    @include media ('<tablet') {
         text-align: center;
     }
 }
@@ -29,7 +29,7 @@
 .nav-item {
     display: inline-block;
     margin: 0 0 0 22px;
-    
+
     &.active a {
         background: #000;
     }
@@ -42,36 +42,58 @@
         color: inherit;
         text-decoration: none;
         display: block;
-        
-        @include media ('<tablet'){
+
+        @include media ('<tablet') {
             font-size: 24px;
         }
-        
+
         &:hover {
             background: #000;
         }
     }
-    
-    @include media ('<tablet'){
+
+    @include media ('<tablet') {
         display: block;
         margin: 0 0 10px;
+        
+        &:last-child {
+            margin: 0;
+        }
     }
 }
 
 .hidden-menu {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 38px;
+    right: 15px;
     display: none;
-    &-item {
-        width: 30px;
-        height: 5px;
-        margin: 0 0 5px;
-        background: #fff;
-    }
-    @include media ('<tablet'){
+    width: 30px;
+    height: 30px;
+
+    @include media ('<tablet') {
         display: block;
-        top: 22px;
-        right: 22px;
+    }
+}
+
+.hidden-menu-item {
+    width: 30px;
+    height: 5px;
+    margin: 0 0 5px;
+    background: #fff;
+    cursor: pointer;
+    transform-origin: 0 0;
+
+    .nav-active &:nth-child(1) {
+        transform: translate(5px, 2px) rotate(45deg);
+        margin: 0;
+    }
+    
+    .nav-active &:nth-child(2) {
+        transform: translate(26px, 1px) rotate(135deg);
+        margin: 0;
+    }
+    
+    .nav-active &:nth-child(3) {
+        display: none;
     }
 }

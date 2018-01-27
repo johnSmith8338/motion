@@ -1,19 +1,21 @@
-.welcome{
+.welcome {
     background: $background-red;
     color: $base-title-color;
     text-align: center;
     padding: 154px 0 0;
-    p{
+    p {
         font-size: 20px;
         font-weight: bold;
         letter-spacing: 1px;
     }
 }
-h1{
+
+h1 {
     font-size: 60px;
     letter-spacing: 10px;
 
-    @include media ('<tablet'){
+    @include media ('<tablet') {
         font-size: 40px;
+        letter-spacing: 5px;
     }
 }
