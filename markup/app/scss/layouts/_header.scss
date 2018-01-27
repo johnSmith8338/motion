@@ -14,16 +14,16 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    
-    .cross{
+
+    .cross {
         position: absolute;
         top: 0;
         right: 22px;
         background: transparent;
         font-size: 60px;
     }
-    
-    @include media ('>=tablet','<=desktop'){
+
+    @include media ('>=tablet', '<=desktop') {
         justify-content: space-around;
         flex-wrap: wrap;
         flex-direction: column;
@@ -38,16 +38,17 @@
     position: absolute;
     top: 0;
     right: 0;
-    
-    @include media ('<1320px'){
+
+    @include media ('<1320px') {
         display: none;
     }
 }
-.corner:after{
+
+.corner:after {
     content: "";
     width: 0;
     height: 0;
-    border-top: 57px solid rgba(0,0,0,0.2);
+    border-top: 57px solid rgba(0, 0, 0, 0.2);
     border-left: 57px solid transparent;
     position: absolute;
     top: 63px;

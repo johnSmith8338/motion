@@ -55,7 +55,7 @@
     @include media ('<tablet') {
         display: block;
         margin: 0 0 10px;
-        
+
         &:last-child {
             margin: 0;
         }
@@ -87,12 +87,12 @@
         transform: translate(5px, 2px) rotate(45deg);
         margin: 0;
     }
-    
+
     .nav-active &:nth-child(2) {
         transform: translate(26px, 1px) rotate(135deg);
         margin: 0;
     }
-    
+
     .nav-active &:nth-child(3) {
         display: none;
     }

@@ -4,29 +4,29 @@
     list-style: none;
     text-align: center;
     width: 33.333%;
-    
-    @include media('<desktop'){
+
+    @include media('<desktop') {
         width: 100%;
         margin: 0 0 5px;
     }
-    
+
     &:first-child {
         margin: 0 0 10px;
-        
-        @include media('<desktop'){
-            margin: 0 0 5px;            
+
+        @include media('<desktop') {
+            margin: 0 0 5px;
         }
     }
-    &.active{
-        .bill-item-title{
+    &.active {
+        .bill-item-title {
             color: #eb4f4e;
         }
-        .bill-item-level{
+        .bill-item-level {
             color: #616161;
         }
-        .bill-item-price{
+        .bill-item-price {
             background: #eb4f4e;
-            a{
+            a {
                 color: #eb4f4e;
             }
         }
@@ -39,8 +39,8 @@
     border-radius: 5px 5px 0 0;
     padding: 15px;
     background: #fff;
-    
-    @include media('<desktop'){
+
+    @include media('<desktop') {
         border: 1px solid #d8d8d8;
     }
 
@@ -50,8 +50,8 @@
     font-size: 40px;
     color: #616161;
     letter-spacing: 3px;
-    
-    @include media('<=desktop'){
+
+    @include media('<=desktop') {
         font-size: 30px;
     }
 

@@ -2,7 +2,7 @@
     background: $background-black;
     color: $base-title-color;
     padding: 9px 0;
-    @include media ('<phone'){
+    @include media ('<phone') {
         padding: 20px 0;
     }
 }
@@ -17,7 +17,7 @@
 
 .copy p {
     margin: 0;
-    @include media ('<phone'){
+    @include media ('<phone') {
         margin: 0 0 20px;
     }
 }
@@ -27,7 +27,7 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    @include media ('<phone'){
+    @include media ('<phone') {
         flex-direction: column;
     }
 }
@@ -50,7 +50,7 @@
     z-index: 2;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     &:after {
         content: "";
         width: 0;
@@ -61,8 +61,8 @@
         position: absolute;
         bottom: -10px;
     }
-    @include media ('<tablet'){
-        width: 60%;    
+    @include media ('<tablet') {
+        width: 60%;
     }
 }
 
