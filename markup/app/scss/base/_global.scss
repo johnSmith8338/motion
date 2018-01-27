@@ -35,23 +35,34 @@ p {
     margin: 0 0 10px;
 }
 
-h2{
+h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+
+    @include media ('<tablet') {
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+}
+
+
+h2 {
     font-size: 40px;
     letter-spacing: 7px;
-    
+
     @include media ('<tablet') {
         font-size: 30px;
         letter-spacing: 3px;
     }
 }
 
-.anchor{
+.anchor {
     height: 0;
     overflow: hidden;
     text-indent: -9999px;
     position: relative;
     top: -103px;
-    &-high{
+    &-high {
         @extend .anchor;
         top: -285px;
     }
